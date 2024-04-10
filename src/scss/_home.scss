@@ -1,0 +1,441 @@
+//====================================================================================================
+.page {
+
+	&__welcome {
+        @include adaptiveValue("padding-top", 210, 105);
+        @include adaptiveValue("padding-bottom", 350, 105);
+        background: url(../img/bg.jpg) center / cover no-repeat;
+	}
+    &__hero {
+        @include adaptiveValue("padding-top", 140, 30);
+        @include adaptiveValue("padding-bottom", 160, 50);
+	}
+    &__services {
+        @include adaptiveValue("padding-top", 220, 110);
+        @include adaptiveValue("padding-bottom", 200, 100);
+        background: url(../img/bg-second.jpg) center / cover no-repeat;
+	}
+    &__started {
+        @include adaptiveValue("padding-top", 178, 110);
+        @include adaptiveValue("padding-bottom", 170, 100);            
+	}
+    &__missions {
+        @include adaptiveValue("padding-top", 213, 110);
+        @include adaptiveValue("padding-bottom", 233, 100);  
+        background: url(../img/bg-three.jpg) center / cover no-repeat; 
+        @media screen and (max-width:$mobile){
+            background: url(../img/bg-three.jpg) center / cover no-repeat ; 
+            background-blend-mode: overlay;
+            background-color: rgba($color: #fff, $alpha: .4);
+        }         
+	}
+    &__message {
+        @include adaptiveValue("padding-top", 179, 80);
+        @include adaptiveValue("padding-bottom", 179, 80);  
+        background-color: #f5f5f5;
+	}
+}
+.welcome {
+
+		&__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+		}
+
+		&__title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: toRem(11);
+            @include adaptiveValue("font-size", 33, 20); 
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 46, 20);}
+            span {
+                font-family: "Poppins";
+                font-weight: 800;
+                @include adaptiveValue("font-size", 95, 30);
+                line-height: 100%;
+                background: linear-gradient(90deg, #fb6c1c 7.29%, #fc7817 46.88%, #ffa800 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+		}
+
+		&__descr {
+            @include adaptiveValue("font-size", 18, 16);
+            line-height: 139%;
+            text-align: center;
+            color: #363636;
+            max-width: toRem(731);
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 41, 20);}
+
+		}
+
+		&__link {
+            font-family: var(--font-family);
+
+		}
+}
+
+
+//====================================================================================================
+.hero {
+    // position: relative;
+
+		&__container {
+            display: flex;
+            @media screen and (max-width:$tablet){
+                  flex-direction: column; 
+            }
+		}
+
+		&__content {
+            @include adaptiveValue("padding-top", 100, 0);
+		}
+
+		&__images {
+		}
+}
+.hero-content {
+
+		&__subtitle {
+            @include adaptiveValue("font-size", 22, 18);
+            line-height: 114%;
+            letter-spacing: 0.09em;
+            color: #000;
+		}
+
+		&__title {
+            display: flex;
+            flex-direction: column;
+            font-family: "Poppins";
+            font-weight: 800;
+            @include adaptiveValue("font-size", 80, 25);
+            line-height: 100%;
+            color: #3f2a1e;
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 60, 20);}
+
+
+            span {
+                font-weight: 800;
+                @include adaptiveValue("font-size", 80, 25);
+                line-height: 100%;
+                background: linear-gradient(90deg, #fb6c1c 7.29%, #fc7817 46.88%, #ffa800 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+		}
+
+		&__text-block {
+            line-height: 156%;
+            color: #363636;
+            max-width: 51%;
+            @media screen and (max-width:$tablet){
+                   max-width: 100%; 
+            }
+            p {
+                &:not(:last-child) {@include adaptiveValue("margin-bottom", 40, 15);}
+            }
+		}
+}
+.hero-images {
+    position: relative;
+    // position: absolute;
+    padding: toRem(138) toRem(0) toRem(155) toRem(0);
+    @media screen and (max-width:$mobileSmall){
+       display: none; 
+    }
+    &__img_1 {
+        position: absolute;
+        top: 11%;
+        right: 246%;
+        @media screen and (max-width:$tablet){
+            top: 10%;
+            left: 40%;
+        }
+        @media screen and (max-width:$mobile){
+             width: 25%;
+             top: 10%;
+             left: 11%; 
+        }
+
+    }
+    &__img_2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        @media screen and (max-width:$tablet){
+            top: 5%;
+        }
+        @media screen and (max-width:$mobile){
+             width: 40%;
+             top: 5%;
+             right: 23%;
+
+        }
+
+    }
+    &__img_3 {
+        position: absolute;
+        right: 24%;
+        top: 46%;
+        box-shadow: 0px 0 0 10px #fff;
+        @media screen and (max-width:$tablet){
+            right: 0;
+            top: 50%;
+        }
+        @media screen and (max-width:$mobile){
+             width: 35%;
+             top: 55%;
+             right: 28%;
+        }
+
+
+    }
+
+		&__item {
+            position: absolute; 
+            img {}
+		}
+
+		&__text {
+            top: 0;
+            right: 200%;
+            padding: toRem(58) toRem(39);
+            @media screen and (max-width:$tablet){
+                  left: 59%;
+            }
+            @media screen and (max-width:$mobile){
+                    left: 30%;
+                  padding: toRem(60) toRem(45);
+
+            }
+		}
+}
+
+//=============================================================================//
+
+.services {
+
+		&__container {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+		}
+
+		&__subtitle {
+            
+            &:not(:last-child) {margin-bottom: toRem(13);}
+		}
+
+		&__title {
+            
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 38, 20);}
+		}
+
+		&__descr {
+            max-width: toRem(670);
+            text-align: right;
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 77, 30);}
+		}
+
+		&__cards {
+            max-width: 85%;
+            display: flex;
+            gap: toRem(18);
+            justify-content: end;
+            flex-wrap: wrap;
+		}
+}
+.services-cards {
+
+		&__card {
+            padding: toRem(53) toRem(75);
+            background-color: #fff;
+            color: #5a4f49;
+            transition: all .3s ease 0s;
+            &:hover {
+                background-color: #5a4f49;
+                color: #fffefe;
+            }
+
+        }
+
+		&__img {
+            display: block;
+            margin: 0 auto;
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 52, 20);}
+		}
+
+		&__title {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 78%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            span {
+                font-size: 24px;
+            }
+
+
+		}
+}
+
+//===================================================================================================================//
+
+.started {
+
+		&__container {
+		}
+
+		&__subtitle {
+            text-align: center;
+            &:not(:last-child) {margin-bottom: toRem(13);}
+		}
+
+		&__title {
+            text-align: center;
+            &:not(:last-child) {margin-bottom: toRem(23);}
+        }
+
+		&__descr {
+            text-align: center;
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 63, 25);}
+		}
+
+		&__cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            row-gap: toRem(15);
+		}
+}
+
+.started-cards {
+
+		&__card {
+            text-align: center;
+            max-width: toRem(300);
+            // overflow: auto;
+            // max-height: toRem(460);
+		}
+
+		&__img {
+            border-radius: 50%;
+            &:not(:last-child) {margin-bottom: toRem(43);}
+            @media screen and (max-width:$mobile){
+                   max-width: 60%; 
+            }
+            img {
+                  max-width: 100%;
+            }
+		}
+
+		&__title {
+            // text-align: center;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 30px;
+            color: #000;
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 35, 20);}
+            
+		}
+
+		&__descr {
+            // text-align: center;
+                  font-weight: 400;
+                  line-height: 156%;
+                  text-align: center;
+                  color: #363636;
+		}
+}
+
+//==================================================================================//
+
+.mission {
+
+		&__container {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+		}
+
+		&__subtitle {
+            &:not(:last-child) {margin-bottom: toRem(13);}
+		}
+
+		&__title {
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 27, 18);}
+		}
+
+		&__descr {
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 45, 20);}
+            max-width: 34%;
+            @media screen and (max-width:$mobile){
+                   max-width: 100%; 
+            }
+
+		}
+
+		&__link {
+            padding: toRem(17) toRem(75);
+		}
+}
+//=========================================================================================
+
+.message {
+    
+		&__container {
+            text-align: center;
+		}
+
+		&__content {
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 71, 30);}
+
+		}
+
+		&__subtitle {
+            &:not(:last-child) {margin-bottom: toRem(10);}
+		}
+
+		&__title {
+            &:not(:last-child) {@include adaptiveValue("margin-bottom", 32, 20);}
+		}
+
+		&__descr {
+		}
+
+		&__form {
+            display: flex;
+            gap: toRem(28);
+            justify-content: space-between;
+            flex-wrap: wrap;
+		}
+
+		&__input {
+            
+            padding: toRem(20) toRem(0) toRem(20) toRem(34);
+            border-radius: toRem(20);
+            &::placeholder {
+                line-height: 156%;
+                color: #363636;
+            }
+            flex: 1 1 auto;
+		}
+
+		&__btn {
+            padding: toRem(17) toRem(75);
+
+		}
+}
+
+
+
+
+
+
+
+
